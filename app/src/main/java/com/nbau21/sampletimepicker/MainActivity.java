@@ -2,6 +2,7 @@ package com.nbau21.sampletimepicker;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button saveButton;
     EditText nameEditText;
     LinearLayout timeLayout;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         Firebase.setAndroidContext(this);
 
+        toolbar = (Toolbar) this.findViewById(R.id.toolbar);
         timeLayout = (LinearLayout) this.findViewById(R.id.time_layout);
         nameEditText = (EditText) this.findViewById(R.id.name_edittext);
         saveButton = (Button) this.findViewById(R.id.save_button);
@@ -36,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         timeLayout.bringToFront();
         saveButton.setOnClickListener(this);
         // if internet && data exists, set it to timePicker && editText
+
+        toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
 
         Firebase ref = new Firebase(Endpoints.FirebaseEndpoint);
         ref.addValueEventListener(new ValueEventListener() {
