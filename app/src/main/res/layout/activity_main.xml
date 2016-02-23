@@ -17,7 +17,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:orientation="horizontal"
-        android:padding="12dp">
+        android:paddingBottom="@dimen/sub_layout_padding_vertical"
+        android:paddingLeft="@dimen/sub_layout_padding_horizontal"
+        android:paddingRight="@dimen/sub_layout_padding_horizontal"
+        android:paddingTop="@dimen/sub_layout_padding_vertical">
 
         <TextView
             android:id="@+id/name_textview"
@@ -26,6 +29,7 @@
             android:layout_above="@+id/divider2"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:capitalize="characters"
             android:paddingRight="4dp"
             android:text="@string/name_text" />
 
@@ -47,8 +51,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/time_picker"
-        android:layout_marginTop="37dp"
-        android:background="@android:color/darker_gray" />
+        android:layout_marginBottom="@dimen/sub_layout_padding_vertical"
+        android:layout_marginTop="@dimen/sub_layout_padding_vertical"
+        android:alpha="0.25"
+        android:background="@color/dividerColor" />
 
     <View
         android:id="@+id/divider1"
@@ -57,14 +63,20 @@
         android:layout_alignParentLeft="false"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/name_layout"
-        android:background="@android:color/darker_gray" />
+        android:alpha="0.25"
+        android:background="@color/dividerColor" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:padding="12dp">
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/divider2"
+        android:paddingBottom="@dimen/main_button_padding_vertical"
+        android:paddingLeft="@dimen/main_button_padding_horizontal"
+        android:paddingRight="@dimen/main_button_padding_horizontal"
+        android:paddingTop="@dimen/main_button_padding_vertical">
 
         <Button
             android:id="@+id/save_button"
@@ -93,7 +105,9 @@
         android:layout_alignTop="@+id/time_picker"
         android:layout_marginTop="28dp"
         android:orientation="horizontal"
-        android:padding="12dp">
+        android:paddingLeft="@dimen/sub_layout_padding_horizontal"
+        android:paddingRight="@dimen/sub_layout_padding_horizontal"
+        android:paddingTop="@dimen/sub_layout_padding_vertical">
 
         <TextView
             android:id="@+id/time_text"
@@ -102,6 +116,7 @@
             android:layout_above="@+id/divider2"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:capitalize="characters"
             android:paddingRight="20dp"
             android:text="@string/time_text" />
 

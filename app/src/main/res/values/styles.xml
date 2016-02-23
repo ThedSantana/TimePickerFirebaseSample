@@ -16,6 +16,7 @@
 
     <style name="TimePickerDialogTheme" parent="@style/Theme.AppCompat.Light.Dialog">
         <item name="colorAccent">@color/customPrimary</item>
+        <item name="android:textColorPrimary">@color/customPrimary</item>
         <item name="android:timePickerStyle">@style/TimePickerDialogStyle</item>
     </style>
 
