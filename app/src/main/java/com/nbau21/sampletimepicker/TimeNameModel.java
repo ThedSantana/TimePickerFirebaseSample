@@ -5,21 +5,21 @@ package com.nbau21.sampletimepicker;
  */
 public class TimeNameModel {
     private String name;
-    private String time;
+    private long time;
 
     public TimeNameModel() {
     }
 
-    public TimeNameModel(String name, String time) {
+    public TimeNameModel(String name, long time) {
         this.name = name;
         this.time = time;
     }
 
-    public String getTime() {
+    public long getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(long time) {
         this.time = time;
     }
 
