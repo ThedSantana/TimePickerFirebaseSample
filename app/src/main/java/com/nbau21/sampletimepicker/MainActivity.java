@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setupLayout();
+        setupFirebaseListener();
+    }
+
+    private void setupLayout() {
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);
@@ -44,7 +49,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         timeLayout.bringToFront();
         saveButton.setOnClickListener(this);
         toolbar.setNavigationIcon(R.drawable.ic_arrow_back_white_24dp);
+    }
 
+    private void setupFirebaseListener() {
         Firebase.setAndroidContext(this);
 
         Firebase ref = new Firebase(Endpoints.FirebaseEndpoint);
