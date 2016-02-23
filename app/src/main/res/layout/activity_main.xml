@@ -67,9 +67,9 @@
             android:layout_above="@+id/divider2"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:capitalize="characters"
             android:paddingRight="4dp"
             android:text="@string/name_text"
+            android:textAllCaps="true"
             android:textSize="@dimen/primary_text_font_size" />
 
         <EditText
@@ -124,6 +124,7 @@
             android:layout_height="wrap_content"
             android:background="@color/customPrimary"
             android:text="@string/save_button"
+            android:textAllCaps="true"
             android:textColor="@android:color/white"
             android:textSize="@dimen/primary_text_font_size" />
     </FrameLayout>
@@ -157,9 +158,9 @@
             android:layout_above="@+id/divider2"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:capitalize="characters"
             android:paddingRight="20dp"
             android:text="@string/time_text"
+            android:textAllCaps="true"
             android:textSize="@dimen/primary_text_font_size" />
 
     </LinearLayout>
