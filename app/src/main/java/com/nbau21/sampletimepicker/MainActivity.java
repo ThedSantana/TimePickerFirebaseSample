@@ -61,16 +61,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 DataSnapshot postSnapshot = snapshot.child(Endpoints.TimePicker);
                 TimeNameModel timeNameModel = postSnapshot.getValue(TimeNameModel.class);
-                nameEditText.setText(timeNameModel.getName());
+                if (timeNameModel != null) {
+                    nameEditText.setText(timeNameModel.getName());
 
-                Calendar calendar = Calendar.getInstance();
-                calendar.setTimeInMillis(timeNameModel.getTime());
-                int hours = calendar.get(Calendar.HOUR_OF_DAY);
-                int minutes = calendar.get(Calendar.MINUTE);
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.setTimeInMillis(timeNameModel.getTime());
+                    int hours = calendar.get(Calendar.HOUR_OF_DAY);
+                    int minutes = calendar.get(Calendar.MINUTE);
 
-                Log.d("meow", Integer.toString(hours));
-                timePicker.setHour(hours);
-                timePicker.setMinute(minutes);
+                    Log.d("meow", Integer.toString(hours));
+                    timePicker.setHour(hours);
+                    timePicker.setMinute(minutes);
+                }
             }
 
             @Override
